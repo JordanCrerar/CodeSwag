@@ -1,7 +1,8 @@
-package com.fluidmatterdevelopment.coderswag
+package com.fluidmatterdevelopment.coderswag.controller
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.fluidmatterdevelopment.coderswag.R
 
 class MainActivity : AppCompatActivity() {
 
