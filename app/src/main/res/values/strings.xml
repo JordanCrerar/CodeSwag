@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">CoderSwag</string>
+    <string name="tvCategories_Text">Categories</string>
+
+    <string name="ListItem_tvCategory_Text">HATS</string>
+    <string name="ListItem_ivCategory_Description">Hats Image</string>
 </resources>
