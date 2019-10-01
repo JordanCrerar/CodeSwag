@@ -1,14 +1,14 @@
 package com.fluidmatterdevelopment.coderswag.services
 
-import com.fluidmatterdevelopment.coderswag.model.Catagory
+import com.fluidmatterdevelopment.coderswag.model.Category
 import com.fluidmatterdevelopment.coderswag.model.Products
 
 object DataService {
     val categories = listOf(
-        Catagory("SHIRTS", "shirtimage"),
-        Catagory("HOODIES", "hoodieimage"),
-        Catagory("HATS","hatimage"),
-        Catagory("DIGITAL","digitalgoodsimage")
+        Category("SHIRTS", "shirtimage"),
+        Category("HOODIES", "hoodieimage"),
+        Category("HATS","hatimage"),
+        Category("DIGITAL","digitalgoodsimage")
     )
     val hats = listOf(
         Products("Devslopes Graphic Beanie","$18", "hat01"),

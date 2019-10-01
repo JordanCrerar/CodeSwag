@@ -8,9 +8,9 @@ import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
 import com.fluidmatterdevelopment.coderswag.R
-import com.fluidmatterdevelopment.coderswag.model.Catagory
+import com.fluidmatterdevelopment.coderswag.model.Category
 
-class CategoryAdapter(private val context: Context, private val categories: List<Catagory>) : BaseAdapter() {
+class CategoryAdapter(private val context: Context, private val categories: List<Category>) : BaseAdapter() {
 
     override fun getView(position: Int, convertView: View?, p2: ViewGroup?): View {
         val categoryView: View
