@@ -10,12 +10,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.fluidmatterdevelopment.coderswag.R
 import com.fluidmatterdevelopment.coderswag.model.Category
 
-class CategoryRecycleAdaptor(val context: Context, val categories: List<Category>) : RecyclerView.Adapter<CategoryRecycleAdaptor.RvHolder>() {
+class CategoryRecycleAdaptor(private val context: Context, private val categories: List<Category>, val itemClick: (Category) -> Unit) : RecyclerView.Adapter<CategoryRecycleAdaptor.RvHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RvHolder {
-        val view = LayoutInflater.from(parent?.context)
+        val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.category_list_item, parent, false)
-        return RvHolder(view)
+        return RvHolder(view, itemClick)
     }
 
     override fun getItemCount(): Int {
@@ -27,7 +27,7 @@ class CategoryRecycleAdaptor(val context: Context, val categories: List<Category
     }
 
     //required class. Inherits from RecyclerView.ViewHolder
-    inner class RvHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class RvHolder(itemView: View, val itemClick: (Category) -> Unit) : RecyclerView.ViewHolder(itemView) {
         val categoryImage = itemView?.findViewById<ImageView>(R.id.ivCategory)
         val categoryName = itemView?.findViewById<TextView>(R.id.tvCategory)
 
@@ -36,6 +36,7 @@ class CategoryRecycleAdaptor(val context: Context, val categories: List<Category
                 "drawable", context.packageName)
             categoryName?.text = category.title
             categoryImage?.setImageResource(resourceId)
+            itemView.setOnClickListener { itemClick(category) }
 
         }
     }
