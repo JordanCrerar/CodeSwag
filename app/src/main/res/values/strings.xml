@@ -5,4 +5,5 @@
     <string name="ListItem_tvCategory_Text">HATS</string>
     <string name="ListItem_ivCategory_Description">Hats Image</string>
     <string name="tvProducts_Text">Products</string>
+    <string name="ivProducts_Description">Hat Image</string>
 </resources>
